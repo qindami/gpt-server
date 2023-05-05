@@ -18,6 +18,10 @@ router.post('/gen-faq', async (ctx) => {
   };
 });
 
+router.get('/hello', async (ctx) => {
+  ctx.body = 'Hello';
+});
+
 app.use(router.routes());
 
 app.listen(PORT, () => {
