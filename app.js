@@ -12,7 +12,9 @@ app.use(koaBody());
 
 router.post('/gen-faq', async (ctx) => {
   const { q } = ctx.request.body;
+  console.log('q :>> ', q);
   const answer = await ask(q)
+  console.log('a :>> ', answer);
   ctx.body = {
     answer
   };
